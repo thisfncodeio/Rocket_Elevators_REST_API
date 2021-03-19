@@ -6738,25 +6738,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\15149\\.nuget\\packages\\": {}
-=======
     "/home/akeeb/.nuget/packages/": {}
->>>>>>> master
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\15149\\desktop\\Rocket_Elevators_REST_API\\Rocket_Elevators_REST_API.csproj",
-      "projectName": "Rocket_Elevators_REST_API",
-      "projectPath": "C:\\Users\\15149\\desktop\\Rocket_Elevators_REST_API\\Rocket_Elevators_REST_API.csproj",
-      "packagesPath": "C:\\Users\\15149\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\15149\\desktop\\Rocket_Elevators_REST_API\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\15149\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
       "projectUniqueName": "/home/akeeb/github/CodeBoxx/Rocket_Elevators_REST_API/Rocket_Elevators_REST_API.csproj",
       "projectName": "Rocket_Elevators_REST_API",
       "projectPath": "/home/akeeb/github/CodeBoxx/Rocket_Elevators_REST_API/Rocket_Elevators_REST_API.csproj",
@@ -6765,7 +6751,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/akeeb/.nuget/NuGet/NuGet.Config"
->>>>>>> master
       ],
       "originalTargetFrameworks": [
         "net5.0"
