@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lionel\\Desktop\\Rocket_Elevators_REST_API\\Rocket_Elevators_REST_API.csproj": {}
+    "C:\\Users\\15149\\desktop\\Rocket_Elevators_REST_API\\Rocket_Elevators_REST_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lionel\\Desktop\\Rocket_Elevators_REST_API\\Rocket_Elevators_REST_API.csproj": {
+    "C:\\Users\\15149\\desktop\\Rocket_Elevators_REST_API\\Rocket_Elevators_REST_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lionel\\Desktop\\Rocket_Elevators_REST_API\\Rocket_Elevators_REST_API.csproj",
+        "projectUniqueName": "C:\\Users\\15149\\desktop\\Rocket_Elevators_REST_API\\Rocket_Elevators_REST_API.csproj",
         "projectName": "Rocket_Elevators_REST_API",
-        "projectPath": "C:\\Users\\lionel\\Desktop\\Rocket_Elevators_REST_API\\Rocket_Elevators_REST_API.csproj",
-        "packagesPath": "C:\\Users\\lionel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lionel\\Desktop\\Rocket_Elevators_REST_API\\obj\\",
+        "projectPath": "C:\\Users\\15149\\desktop\\Rocket_Elevators_REST_API\\Rocket_Elevators_REST_API.csproj",
+        "packagesPath": "C:\\Users\\15149\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\15149\\desktop\\Rocket_Elevators_REST_API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lionel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\15149\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
