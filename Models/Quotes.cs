@@ -24,5 +24,7 @@ namespace Rocket_Elevators_REST_API.Models
         public int? NumOfActivityHoursPerDay { get; set; }
         public int? RequiredColumns { get; set; }
         public int? RequiredShafts { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }
