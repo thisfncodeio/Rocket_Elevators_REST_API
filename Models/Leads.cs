@@ -16,5 +16,8 @@ namespace Rocket_Elevators_REST_API.Models
         public string Message { get; set; }
         public byte[] Attachment { get; set; }
         public string FileName { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+        public long? customer_id { get; set; }
     }
 }

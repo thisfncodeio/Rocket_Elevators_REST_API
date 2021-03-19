@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\15149\\desktop\\Rocket_Elevators_REST_API\\Rocket_Elevators_REST_API.csproj": {}
+    "/home/akeeb/github/CodeBoxx/Rocket_Elevators_REST_API/Rocket_Elevators_REST_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\15149\\desktop\\Rocket_Elevators_REST_API\\Rocket_Elevators_REST_API.csproj": {
+    "/home/akeeb/github/CodeBoxx/Rocket_Elevators_REST_API/Rocket_Elevators_REST_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\15149\\desktop\\Rocket_Elevators_REST_API\\Rocket_Elevators_REST_API.csproj",
+        "projectUniqueName": "/home/akeeb/github/CodeBoxx/Rocket_Elevators_REST_API/Rocket_Elevators_REST_API.csproj",
         "projectName": "Rocket_Elevators_REST_API",
-        "projectPath": "C:\\Users\\15149\\desktop\\Rocket_Elevators_REST_API\\Rocket_Elevators_REST_API.csproj",
-        "packagesPath": "C:\\Users\\15149\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\15149\\desktop\\Rocket_Elevators_REST_API\\obj\\",
+        "projectPath": "/home/akeeb/github/CodeBoxx/Rocket_Elevators_REST_API/Rocket_Elevators_REST_API.csproj",
+        "packagesPath": "/home/akeeb/.nuget/packages/",
+        "outputPath": "/home/akeeb/github/CodeBoxx/Rocket_Elevators_REST_API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\15149\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/akeeb/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -38,6 +38,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -46,15 +50,7 @@
             },
             "MySql.Data.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.22, )"
-            },
-            "MySqlConnector": {
-              "target": "Package",
-              "version": "[1.3.1, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[3.2.4, )"
+              "version": "[8.0.20, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -79,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }

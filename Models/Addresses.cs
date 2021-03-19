@@ -21,6 +21,10 @@ namespace Rocket_Elevators_REST_API.Models
         public string PostalCode { get; set; }
         public string Country { get; set; }
         public string Notes { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+        public decimal? Lat { get; set; }
+        public decimal? Lng { get; set; }
 
         public virtual ICollection<Buildings> Buildings { get; set; }
         public virtual ICollection<Customers> Customers { get; set; }
