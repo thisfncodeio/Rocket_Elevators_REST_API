@@ -12,5 +12,7 @@ namespace Rocket_Elevators_REST_API.Models
         public string Statement { get; set; }
         public string DataSource { get; set; }
         public string Status { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }
