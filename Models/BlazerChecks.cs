@@ -14,5 +14,8 @@ namespace Rocket_Elevators_REST_API.Models
         public string SlackChannels { get; set; }
         public string CheckType { get; set; }
         public string Message { get; set; }
+        public DateTime? LastRunAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }
