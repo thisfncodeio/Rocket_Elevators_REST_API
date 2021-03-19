@@ -10,7 +10,7 @@ using Pomelo.EntityFrameworkCore.MySql;
 namespace Rocket_Elevators_REST_API.Models.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class ColumnsController : ControllerBase
     {
         private readonly RailsApp_developmentContext _context;
