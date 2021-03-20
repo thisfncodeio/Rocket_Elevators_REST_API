@@ -25,7 +25,7 @@ namespace Rocket_Elevators_REST_API.Controllers
       return await _context.Leads.ToListAsync();
     }
 
-    [HttpGet("{lastthirtydays}")]
+    [HttpGet("recent")]
     public async Task<ActionResult<List<Leads>>> LastThirtyDays()
     {
       var lead = await _context.Leads
