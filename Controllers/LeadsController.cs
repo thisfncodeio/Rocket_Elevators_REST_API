@@ -28,11 +28,11 @@ namespace Rocket_Elevators_REST_API.Controllers
     [HttpGet("recent")]
     public async Task<ActionResult<List<Leads>>> LastThirtyDays()
     {
-      var lead = await _context.Leads
+      var leads = await _context.Leads
         .Where(lead => lead.customer_id == null)
         .ToListAsync();
 
-      var newLeads = lead.Where(lead => lead.CreatedAt >= DateTime.Today.AddDays(-30)).ToList();
+      var newLeads = leads.Where(lead => lead.CreatedAt >= DateTime.Today.AddDays(-30)).ToList();
                                         //   1986                   2/25/21
       if (newLeads == null)
       {
