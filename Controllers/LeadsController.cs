@@ -32,8 +32,8 @@ namespace Rocket_Elevators_REST_API.Controllers
         .Where(lead => lead.customer_id == null)
         .ToListAsync();
 
-      var newLeads = lead.Where(lead => lead.CreatedAt <= DateTime.Today.AddDays(-30)).ToList();
-
+      var newLeads = lead.Where(lead => lead.CreatedAt >= DateTime.Today.AddDays(-30)).ToList();
+                                        //   1986                   2/25/21
       if (newLeads == null)
       {
         return NotFound();
