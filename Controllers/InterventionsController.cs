@@ -20,9 +20,22 @@ namespace Rocket_Elevators_REST_API.Controllers
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Interventions>>> GetBatteries()
+    public async Task<ActionResult<IEnumerable<Interventions>>> GetInterventions()
     {
       return await _context.Interventions.ToListAsync();
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Interventions>> GetIntervention(long id)
+    {
+      var intervention = await _context.Interventions.FindAsync(id);
+
+      if (intervention == null)
+      {
+        return NotFound();
+      }
+
+      return intervention;
     }
 
     [HttpGet("pending")]
@@ -41,24 +54,24 @@ namespace Rocket_Elevators_REST_API.Controllers
     }
 
 
-    [HttpPut("{id}/pending")]
-    public async Task<IActionResult> ChangeInterventionStatus(long id, [FromBody] Interventions intervention)
+    [HttpPut("start/{id}")]
+    public async Task<IActionResult> ChangeInterventionStatusToInProgress(long id)
     {
       var findIntervention = await _context.Interventions.FindAsync(id);
 
-      if (intervention == null)
-      {
-        return BadRequest();
-      }
+      // if (intervention == null)
+      // {
+      //   return BadRequest();
+      // }
 
       if (findIntervention == null)
       {
         return NotFound();
       }
 
-      if (intervention.Status == findIntervention.Status)
+      if (findIntervention.Status == "InProgress")
       {
-        ModelState.AddModelError("Status", "Looks like you didn't change the status.");
+        ModelState.AddModelError("Status", "Looks like this intervention has already been started.");
       }
 
       if (!ModelState.IsValid)
@@ -66,8 +79,9 @@ namespace Rocket_Elevators_REST_API.Controllers
         return BadRequest(ModelState);
       }
 
-      findIntervention.Status = intervention.Status;
-      findIntervention.StartDate = DateTime.Today;
+      findIntervention.Status = "InProgress";
+      // string date = DateTime.Today.ToString("yyyy-MM-dd H:mm:ss");
+      findIntervention.StartDate = DateTimeOffset.Now;
 
       try
       {
@@ -88,24 +102,24 @@ namespace Rocket_Elevators_REST_API.Controllers
       return NoContent();
     }
 
-    [HttpPut("{id}/completed")]
-    public async Task<IActionResult> CompleteIntervention(long id, [FromBody] Interventions intervention)
+    [HttpPut("complete/{id}")]
+    public async Task<IActionResult> ChangeInterventionStatusToCompleted(long id)
     {
       var findIntervention = await _context.Interventions.FindAsync(id);
 
-      if (intervention == null)
-      {
-        return BadRequest();
-      }
+      // if (intervention == null)
+      // {
+      //   return BadRequest();
+      // }
 
       if (findIntervention == null)
       {
         return NotFound();
       }
 
-      if (intervention.Status == findIntervention.Status)
+      if (findIntervention.Status == "Completed")
       {
-        ModelState.AddModelError("Status", "Looks like you didn't change the status.");
+        ModelState.AddModelError("Status", "Looks like this intervention has already been completed.");
       }
 
       if (!ModelState.IsValid)
@@ -113,8 +127,8 @@ namespace Rocket_Elevators_REST_API.Controllers
         return BadRequest(ModelState);
       }
 
-      findIntervention.Status = intervention.Status;
-      findIntervention.EndDate = DateTime.Today;
+      findIntervention.Status = "Completed";
+      findIntervention.EndDate = DateTimeOffset.Now;
 
       try
       {
