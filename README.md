@@ -7,34 +7,41 @@ It will allow us to know and to manipulate the status of all the relevant entiti
 
 <ol>
    <li>Retrieving the current status of a specific Battery</li>
-   <p>https://rocketelevatorapi.azurewebsites.net/batteries/1/status</p>
+   <p>https://rocket-elevators-rest-apii.herokuapp.com/batteries/1/status</p>
+   
    <li>Changing the status of a specific Batter</li>
-   <p>Edit in postman status text:
-   {
- 
-   "Status": "Inactive"
-    }
-  </p>
+   <p>https://rocket-elevators-rest-apii.herokuapp.com/batteries/1</p>
+   <p>Edit in postman: { "status": "Inactive" }</p>
+
    <li>Retrieving the current status of a specific Column</li>
-   <p>https://rocketelevatorapi.azurewebsites.net/columns/1/status</p>
+   <p>https://rocket-elevators-rest-apii.herokuapp.com/columns/1/status</p>
+   
    <li>Changing the status of a specific Column</li>
-   <p>Edit in postman status text:
-   {
- 
-   "Status": "Inactive"
-    }</p>
+   <p>https://rocket-elevators-rest-apii.herokuapp.com/columns/1</p>
+   <p>Edit in postman: { "status": "Inactive" }</p>
+
    <li>Retrieving the current status of a specific Elevator</li>
-   <p>https://rocketelevatorapi.azurewebsites.net/elevators/1/status</p>
+   <p>https://rocket-elevators-rest-apii.herokuapp.com/elevators/1/status</p>
+
    <li>Changing the status of a specific Elevator</li>
-   <p>Edit in postman status text:
-   {
- 
-   "Status": "Inactive"
-    }</p>
+   <p>https://rocket-elevators-rest-apii.herokuapp.com/elevators/1</p>
+   <p>Edit in postman:{ "status": "Inactive" }</p>
+
    <li>Retrieving a list of Elevators that are not in operation at the time of the request</li>
-   <p>https://rocketelevatorapi.azurewebsites.net/elevators/inactive</p>
+   <p>https://rocket-elevators-rest-apii.herokuapp.com/elevators/inactive</p>
+   
    <li>Retrieving a list of Buildings that contain at least one battery, column or elevator requiring intervention</li>
-   <p>https://rocketelevatorapi.azurewebsites.net/Buildings</p>
+   <p>https://rocket-elevators-rest-apii.herokuapp.com/buildings</p>
+   
    <li>Retrieving a list of Leads created in the last 30 days who have not yet become customers.</li>
-   <p>https://rocketelevatorapi.azurewebsites.net/Leads/recent</p>
+   <p>https://rocket-elevators-rest-apii.herokuapp.com/leads/recent</p>
+   
+   <li>Returns all fields of all intervention Request records that do not have a start date and are in "Pending" status.</li>
+   <p>https://rocket-elevators-rest-apii.herokuapp.com/pending</p>
+   
+   <li>Changes the status of the intervention request to "InProgress" and adds a start date and time.</li>
+   <p>https://rocket-elevators-rest-apii.herokuapp.com/start/1</p>
+   
+   <li>Changes the status of the request for action to "Completed" and adds an end date and time.</li>
+   <p>https://rocket-elevators-rest-apii.herokuapp.com/complete/1</p>
 </ol>
