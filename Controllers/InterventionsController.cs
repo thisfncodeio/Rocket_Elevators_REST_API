@@ -53,6 +53,18 @@ namespace Rocket_Elevators_REST_API.Controllers
       return interventions;
     }
 
+    [HttpPost]
+    public async Task<ActionResult<IEnumerable<Interventions>>> PostInterventions(Interventions intervention)
+    {
+      Interventions interventionForm = intervention;
+      interventionForm.Author = 1;
+      interventionForm.Result = "Incomplete";
+      interventionForm.Status = "Pending";
+      _context.Interventions.Add(interventionForm);
+      await _context.SaveChangesAsync();
+
+      return CreatedAtAction(nameof(GetInterventions), new { id = intervention.Id }, intervention);
+    }
 
     [HttpPut("start/{id}")]
     public async Task<IActionResult> ChangeInterventionStatusToInProgress(long id)
@@ -148,7 +160,6 @@ namespace Rocket_Elevators_REST_API.Controllers
 
       return NoContent();
     }
-
 
     private bool InterventionExists(long id)
     {
