@@ -13,12 +13,12 @@ namespace Rocket_Elevators_REST_API.Controllers
   public class BatteriesController : ControllerBase
   {
     private readonly RailsApp_developmentContext _context;
-    
+
     public BatteriesController(RailsApp_developmentContext context)
     {
       _context = context;
     }
-    
+
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Batteries>>> GetBatteries()
     {
@@ -51,7 +51,7 @@ namespace Rocket_Elevators_REST_API.Controllers
       return battery.Status;
     }
 
-    [HttpGet("from_building/{building_id}")]
+    [HttpGet("from-building/{building_id}")]
     public async Task<ActionResult<IEnumerable<Batteries>>> GetbatteriesBybuildingId(long building_id)
     {
       var batteries = await _context.Batteries.Where(battery => battery.BuildingId == building_id).ToListAsync();
