@@ -20,7 +20,6 @@ namespace Rocket_Elevators_REST_API.Controllers
     }
 
     [HttpGet]
-    // public async Task<ActionResult<IEnumerable<Batteries>>> GetSummary()
     public async Task<ActionResult<string>> GetSummary()
     {
       var elevators = await _context.Elevators.ToListAsync();
@@ -28,16 +27,16 @@ namespace Rocket_Elevators_REST_API.Controllers
       var batteries = await _context.Batteries.ToListAsync();
       var quotes = await _context.Quotes.ToListAsync();
       var leads = await _context.Leads.ToListAsync();
+      var buildings = await _context.Buildings.ToListAsync();
 
       var elevatorsInactive = await _context.Elevators
           .Where(elevator => elevator.Status != "Active")
           .ToListAsync();
 
-      var buildings = await _context.Buildings.ToListAsync();
-
       var addressCities = await _context.Addresses
-          .Select(address => address.City).Distinct().ToListAsync();
-      
+          .Select(address => address.City)
+          .Distinct()
+          .ToListAsync();
 
       return $"Greetings. There are currently {elevators.Count} elevators deployed in the {buildings.Count} buildings of your {customers.Count} customers. Currently, {elevatorsInactive.Count} elevators are not in Running Status and are being serviced. {batteries.Count} batteries are deployed across {addressCities.Count} cities. On another note, you currently have {quotes.Count} quotes awaiting processing. You also have {leads.Count} leads in your contact requests.";
     }
